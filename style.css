@@ -1,0 +1,114 @@
+:root {
+    --color: blue;
+  }
+  
+  body {
+    background: black;
+    display: flex;  
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  #title {
+    height: 50px;
+    width: 1050px;
+    background-color: white;
+  }
+  
+  #frameWrapper{
+    display:flex;
+    justify-content: center;
+    width: 1100px;
+    height: 1050px;
+  }
+  
+  #frame1{
+    height: 1025px;
+    width: 50px;
+    background: red;
+    border-radius: 50px 0px 50px 0px;
+  /*   position: ; */
+  }
+  
+  #frameSq {
+    height: 900px;
+    widtH: 1100px;
+    background: black;  
+    display: flex;
+  }
+  
+  #frame2{
+    height: 1025px;
+    width: 50px;
+    background: red;
+    border-radius: 0px 50px 0px 50px;
+  }
+  
+  
+  .columnDiv{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 900px;
+    width: 143px;
+    border: 1px solid yellow;
+  }
+  
+  .singleDiv{
+    background-color: grey;
+    height: 300px;
+    width: 143px;
+    border-radius: 70px;
+    border: 2px solid green; 
+  }
+  
+  .fall{
+    animation-name: fall;
+    animation-duration: 200ms;
+  }
+  
+  @keyframes fall {
+     from {
+          transform: translateY(-500px);
+      }
+      to {
+          transform: translateY(0);
+      }
+  }
+  
+  .singleDiv:hover{
+    background-color: white;
+  }
+  
+  .overlayScreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+  
+  .overlayScreen button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+  }
+  
+  .overlayMessage {
+    color: white;
+  }
+  
+  .overlayScreen.show {
+    display: flex;
+  }
